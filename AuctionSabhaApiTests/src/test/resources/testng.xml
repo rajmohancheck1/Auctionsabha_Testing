@@ -1,0 +1,63 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Auction Sabha API Test Suite" verbose="2" parallel="false">
+
+    <!--
+        Tests run in strict order:
+        1. TestConfig  → @BeforeSuite  : register + login all roles
+        2. AuthTest    → auth endpoints (profile, change-password, negative cases)
+        3. ProductTest → product endpoints
+        4. AuctionTest → auction endpoints
+        5. AdminTest   → admin endpoints
+        6. WalletTest  → wallet endpoints
+        7. BidTest     → bids endpoint
+        8. VerifierApplicationTest → verifier-application endpoints
+    -->
+
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
+    <test name="Auth Tests" preserve-order="true">
+        <classes>
+            <class name="com.auctionsabha.config.TestConfig"/>
+            <class name="com.auctionsabha.tests.AuthTest"/>
+        </classes>
+    </test>
+
+    <test name="Product Tests" preserve-order="true">
+        <classes>
+            <class name="com.auctionsabha.tests.ProductTest"/>
+        </classes>
+    </test>
+
+    <test name="Auction Tests" preserve-order="true">
+        <classes>
+            <class name="com.auctionsabha.tests.AuctionTest"/>
+        </classes>
+    </test>
+
+    <test name="Admin Tests" preserve-order="true">
+        <classes>
+            <class name="com.auctionsabha.tests.AdminTest"/>
+        </classes>
+    </test>
+
+    <test name="Wallet Tests" preserve-order="true">
+        <classes>
+            <class name="com.auctionsabha.tests.WalletTest"/>
+        </classes>
+    </test>
+
+    <test name="Bid Tests" preserve-order="true">
+        <classes>
+            <class name="com.auctionsabha.tests.BidTest"/>
+        </classes>
+    </test>
+
+    <test name="Verifier Application Tests" preserve-order="true">
+        <classes>
+            <class name="com.auctionsabha.tests.VerifierApplicationTest"/>
+        </classes>
+    </test>
+
+</suite>

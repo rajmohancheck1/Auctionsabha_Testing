@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Auction Sabha API Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+  </listeners>
+  <test thread-count="5" name="Auth Tests(failed)" verbose="0">
+    <classes>
+      <class name="com.auctionsabha.tests.AuthTest">
+        <methods>
+          <include name="updateProfileWithoutToken_shouldBeRejected"/>
+          <include name="loginWithMissingEmailField_shouldReturn400"/>
+          <include name="getProfileWithoutToken_shouldReturn401"/>
+        </methods>
+      </class> <!-- com.auctionsabha.tests.AuthTest -->
+    </classes>
+  </test> <!-- Auth Tests(failed) -->
+  <test thread-count="5" name="Product Tests(failed)" verbose="0">
+    <classes>
+      <class name="com.auctionsabha.tests.ProductTest">
+        <methods>
+          <include name="getPendingProducts_asBuyer_shouldBeForbidden"/>
+          <include name="reviewProduct_asBuyer_shouldBeForbidden"/>
+        </methods>
+      </class> <!-- com.auctionsabha.tests.ProductTest -->
+    </classes>
+  </test> <!-- Product Tests(failed) -->
+  <test thread-count="5" name="Auction Tests(failed)" verbose="0">
+    <classes>
+      <class name="com.auctionsabha.tests.AuctionTest">
+        <methods>
+          <include name="getAuctionSlots_withoutDate_shouldReturn400OrDefault"/>
+          <include name="getLeaderboard_nonExistentAuction_shouldReturn404"/>
+        </methods>
+      </class> <!-- com.auctionsabha.tests.AuctionTest -->
+    </classes>
+  </test> <!-- Auction Tests(failed) -->
+  <test thread-count="5" name="Admin Tests(failed)" verbose="0">
+    <classes>
+      <class name="com.auctionsabha.tests.AdminTest">
+        <methods>
+          <include name="resolveAuctionId"/>
+          <include name="stopAuction_asAdmin_shouldReturn200"/>
+        </methods>
+      </class> <!-- com.auctionsabha.tests.AdminTest -->
+    </classes>
+  </test> <!-- Admin Tests(failed) -->
+  <test thread-count="5" name="Wallet Tests(failed)" verbose="0">
+    <classes>
+      <class name="com.auctionsabha.tests.WalletTest">
+        <methods>
+          <include name="depositZeroAmount_shouldReturn400"/>
+          <include name="depositNegativeAmount_shouldReturn400"/>
+          <include name="withdrawInsufficientBalance_shouldReturn400"/>
+        </methods>
+      </class> <!-- com.auctionsabha.tests.WalletTest -->
+    </classes>
+  </test> <!-- Wallet Tests(failed) -->
+  <test thread-count="5" name="Bid Tests(failed)" verbose="0">
+    <classes>
+      <class name="com.auctionsabha.tests.BidTest">
+        <methods>
+          <include name="getMyBids_withoutBuyerIdParam_shouldReturn400OrDefault"/>
+        </methods>
+      </class> <!-- com.auctionsabha.tests.BidTest -->
+    </classes>
+  </test> <!-- Bid Tests(failed) -->
+</suite> <!-- Failed suite [Auction Sabha API Test Suite] -->

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./mvnw.cmd clean *)",
+      "Bash(./mvnw.cmd allure:report)",
+      "Bash(start \"\" \"C:\\\\Users\\\\2479761\\\\Downloads\\\\Action sabha\\\\Api Testing\\\\AuctionSabhaApiTests\\\\target\\\\site\\\\allure-maven-plugin\\\\index.html\")"
+    ]
+  }
+}

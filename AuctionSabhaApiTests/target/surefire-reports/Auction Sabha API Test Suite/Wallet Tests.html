@@ -1,0 +1,295 @@
+<html>
+<head>
+<title>TestNG:  Wallet Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Wallet Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>13/3/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu May 07 13:16:20 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>28 seconds (28348 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.auctionsabha.tests.WalletTest.withdrawInsufficientBalance_shouldReturn400()'><b>withdrawInsufficientBalance_shouldReturn400</b><br>Test class: com.auctionsabha.tests.WalletTest</td>
+<td><div><pre>java.lang.AssertionError: Withdraw with insufficient balance should fail
+Expected: (is &lt;400&gt; or is &lt;422&gt;)
+     but: was &lt;409&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at com.auctionsabha.tests.WalletTest.withdrawInsufficientBalance_shouldReturn400(WalletTest.java:176)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1100926586", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1100926586'><pre>java.lang.AssertionError: Withdraw with insufficient balance should fail
+Expected: (is &lt;400&gt; or is &lt;422&gt;)
+     but: was &lt;409&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at com.auctionsabha.tests.WalletTest.withdrawInsufficientBalance_shouldReturn400(WalletTest.java:176)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.auctionsabha.tests.WalletTest@41b1f51e</td></tr>
+<tr>
+<td title='com.auctionsabha.tests.WalletTest.depositNegativeAmount_shouldReturn400()'><b>depositNegativeAmount_shouldReturn400</b><br>Test class: com.auctionsabha.tests.WalletTest</td>
+<td><div><pre>java.lang.AssertionError: Negative deposit should fail
+Expected: (is &lt;400&gt; or is &lt;422&gt;)
+     but: was &lt;200&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at com.auctionsabha.tests.WalletTest.depositNegativeAmount_shouldReturn400(WalletTest.java:136)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1874869494", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1874869494'><pre>java.lang.AssertionError: Negative deposit should fail
+Expected: (is &lt;400&gt; or is &lt;422&gt;)
+     but: was &lt;200&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at com.auctionsabha.tests.WalletTest.depositNegativeAmount_shouldReturn400(WalletTest.java:136)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>2</td>
+<td>com.auctionsabha.tests.WalletTest@41b1f51e</td></tr>
+<tr>
+<td title='com.auctionsabha.tests.WalletTest.depositZeroAmount_shouldReturn400()'><b>depositZeroAmount_shouldReturn400</b><br>Test class: com.auctionsabha.tests.WalletTest</td>
+<td><div><pre>java.lang.AssertionError: Zero deposit should fail
+Expected: (is &lt;400&gt; or is &lt;422&gt;)
+     but: was &lt;200&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at com.auctionsabha.tests.WalletTest.depositZeroAmount_shouldReturn400(WalletTest.java:118)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace341062557", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace341062557'><pre>java.lang.AssertionError: Zero deposit should fail
+Expected: (is &lt;400&gt; or is &lt;422&gt;)
+     but: was &lt;200&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at com.auctionsabha.tests.WalletTest.depositZeroAmount_shouldReturn400(WalletTest.java:118)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>2</td>
+<td>com.auctionsabha.tests.WalletTest@41b1f51e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.auctionsabha.tests.WalletTest.getTransactions_withoutToken_shouldBeRejected()'><b>getTransactions_withoutToken_shouldBeRejected</b><br>Test class: com.auctionsabha.tests.WalletTest</td>
+<td></td>
+<td>0</td>
+<td>com.auctionsabha.tests.WalletTest@41b1f51e</td></tr>
+<tr>
+<td title='com.auctionsabha.tests.WalletTest.withdrawFromBuyerWallet_shouldReturn200()'><b>withdrawFromBuyerWallet_shouldReturn200</b><br>Test class: com.auctionsabha.tests.WalletTest</td>
+<td></td>
+<td>2</td>
+<td>com.auctionsabha.tests.WalletTest@41b1f51e</td></tr>
+<tr>
+<td title='com.auctionsabha.tests.WalletTest.getWallet_withoutToken_shouldBeRejected()'><b>getWallet_withoutToken_shouldBeRejected</b><br>Test class: com.auctionsabha.tests.WalletTest</td>
+<td></td>
+<td>0</td>
+<td>com.auctionsabha.tests.WalletTest@41b1f51e</td></tr>
+<tr>
+<td title='com.auctionsabha.tests.WalletTest.holdBidInsufficientBalance_shouldReturn400()'><b>holdBidInsufficientBalance_shouldReturn400</b><br>Test class: com.auctionsabha.tests.WalletTest</td>
+<td></td>
+<td>0</td>
+<td>com.auctionsabha.tests.WalletTest@41b1f51e</td></tr>
+<tr>
+<td title='com.auctionsabha.tests.WalletTest.getBuyerTransactions_shouldReturn200()'><b>getBuyerTransactions_shouldReturn200</b><br>Test class: com.auctionsabha.tests.WalletTest</td>
+<td></td>
+<td>1</td>
+<td>com.auctionsabha.tests.WalletTest@41b1f51e</td></tr>
+<tr>
+<td title='com.auctionsabha.tests.WalletTest.holdBidAmount_shouldReturn200Or400()'><b>holdBidAmount_shouldReturn200Or400</b><br>Test class: com.auctionsabha.tests.WalletTest</td>
+<td></td>
+<td>2</td>
+<td>com.auctionsabha.tests.WalletTest@41b1f51e</td></tr>
+<tr>
+<td title='com.auctionsabha.tests.WalletTest.withdrawWithoutToken_shouldBeRejected()'><b>withdrawWithoutToken_shouldBeRejected</b><br>Test class: com.auctionsabha.tests.WalletTest</td>
+<td></td>
+<td>0</td>
+<td>com.auctionsabha.tests.WalletTest@41b1f51e</td></tr>
+<tr>
+<td title='com.auctionsabha.tests.WalletTest.payoutSeller_shouldReturn200Or400()'><b>payoutSeller_shouldReturn200Or400</b><br>Test class: com.auctionsabha.tests.WalletTest</td>
+<td></td>
+<td>2</td>
+<td>com.auctionsabha.tests.WalletTest@41b1f51e</td></tr>
+<tr>
+<td title='com.auctionsabha.tests.WalletTest.depositToSellerWallet_shouldReturn200()'><b>depositToSellerWallet_shouldReturn200</b><br>Test class: com.auctionsabha.tests.WalletTest</td>
+<td></td>
+<td>2</td>
+<td>com.auctionsabha.tests.WalletTest@41b1f51e</td></tr>
+<tr>
+<td title='com.auctionsabha.tests.WalletTest.getWallet_nonExistentUser_shouldReturn404()'><b>getWallet_nonExistentUser_shouldReturn404</b><br>Test class: com.auctionsabha.tests.WalletTest</td>
+<td></td>
+<td>1</td>
+<td>com.auctionsabha.tests.WalletTest@41b1f51e</td></tr>
+<tr>
+<td title='com.auctionsabha.tests.WalletTest.refundBuyer_shouldReturn200Or400()'><b>refundBuyer_shouldReturn200Or400</b><br>Test class: com.auctionsabha.tests.WalletTest</td>
+<td></td>
+<td>2</td>
+<td>com.auctionsabha.tests.WalletTest@41b1f51e</td></tr>
+<tr>
+<td title='com.auctionsabha.tests.WalletTest.depositToBuyerWallet_shouldReturn200()'><b>depositToBuyerWallet_shouldReturn200</b><br>Test class: com.auctionsabha.tests.WalletTest</td>
+<td></td>
+<td>2</td>
+<td>com.auctionsabha.tests.WalletTest@41b1f51e</td></tr>
+<tr>
+<td title='com.auctionsabha.tests.WalletTest.getBuyerWallet_shouldReturn200WithBalance()'><b>getBuyerWallet_shouldReturn200WithBalance</b><br>Test class: com.auctionsabha.tests.WalletTest</td>
+<td></td>
+<td>0</td>
+<td>com.auctionsabha.tests.WalletTest@41b1f51e</td></tr>
+</table><p>
+</body>
+</html>

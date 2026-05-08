@@ -1,0 +1,9 @@
+com\auctionsabha\tests\AuctionTest.class
+com\auctionsabha\config\TestConfig.class
+com\auctionsabha\tests\AuthTest.class
+com\auctionsabha\tests\VerifierApplicationTest.class
+com\auctionsabha\tests\BidTest.class
+com\auctionsabha\tests\WalletTest.class
+com\auctionsabha\utils\TokenManager.class
+com\auctionsabha\tests\AdminTest.class
+com\auctionsabha\tests\ProductTest.class

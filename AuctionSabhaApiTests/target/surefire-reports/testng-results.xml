@@ -1,0 +1,907 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="79" passed="67" failed="12" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-05-07T13:14:47 IST" name="Auction Sabha API Test Suite" finished-at="2026-05-07T13:17:07 IST" duration-ms="139355">
+    <groups>
+    </groups>
+    <test started-at="2026-05-07T13:14:47 IST" name="Auth Tests" finished-at="2026-05-07T13:15:32 IST" duration-ms="44980">
+      <class name="com.auctionsabha.tests.AuthTest">
+        <test-method signature="registerDuplicateEmail_shouldReturn400Or409()[pri:1, instance:com.auctionsabha.tests.AuthTest@12968227]" started-at="2026-05-07T13:14:48 IST" name="registerDuplicateEmail_shouldReturn400Or409" finished-at="2026-05-07T13:15:04 IST" duration-ms="16662" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerDuplicateEmail_shouldReturn400Or409 -->
+        <test-method signature="loginWithWrongPassword_shouldReturn401()[pri:2, instance:com.auctionsabha.tests.AuthTest@12968227]" started-at="2026-05-07T13:15:05 IST" name="loginWithWrongPassword_shouldReturn401" finished-at="2026-05-07T13:15:06 IST" duration-ms="1079" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithWrongPassword_shouldReturn401 -->
+        <test-method signature="loginWithNonExistentEmail_shouldReturn400OrNotFound()[pri:3, instance:com.auctionsabha.tests.AuthTest@12968227]" started-at="2026-05-07T13:15:06 IST" name="loginWithNonExistentEmail_shouldReturn400OrNotFound" finished-at="2026-05-07T13:15:06 IST" duration-ms="696" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithNonExistentEmail_shouldReturn400OrNotFound -->
+        <test-method signature="loginWithMissingEmailField_shouldReturn400()[pri:4, instance:com.auctionsabha.tests.AuthTest@12968227]" started-at="2026-05-07T13:15:06 IST" name="loginWithMissingEmailField_shouldReturn400" finished-at="2026-05-07T13:15:07 IST" duration-ms="592" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Login without email should return 400
+Expected: (is <400> or is <422>)
+     but: was <401>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Login without email should return 400
+Expected: (is <400> or is <422>)
+     but: was <401>
+at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+at com.auctionsabha.tests.AuthTest.loginWithMissingEmailField_shouldReturn400(AuthTest.java:114)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithMissingEmailField_shouldReturn400 -->
+        <test-method signature="getAdminProfile_shouldReturn200WithUserDetails()[pri:5, instance:com.auctionsabha.tests.AuthTest@12968227]" started-at="2026-05-07T13:15:07 IST" name="getAdminProfile_shouldReturn200WithUserDetails" finished-at="2026-05-07T13:15:09 IST" duration-ms="1813" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAdminProfile_shouldReturn200WithUserDetails -->
+        <test-method signature="getBuyerProfile_shouldReturn200()[pri:6, instance:com.auctionsabha.tests.AuthTest@12968227]" started-at="2026-05-07T13:15:09 IST" name="getBuyerProfile_shouldReturn200" finished-at="2026-05-07T13:15:11 IST" duration-ms="1798" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getBuyerProfile_shouldReturn200 -->
+        <test-method signature="getProfileWithoutToken_shouldReturn401()[pri:7, instance:com.auctionsabha.tests.AuthTest@12968227]" started-at="2026-05-07T13:15:11 IST" name="getProfileWithoutToken_shouldReturn401" finished-at="2026-05-07T13:15:12 IST" duration-ms="1772" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Profile without token should be rejected
+Expected: (is <401> or is <403>)
+     but: was <200>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Profile without token should be rejected
+Expected: (is <401> or is <403>)
+     but: was <200>
+at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+at com.auctionsabha.tests.AuthTest.getProfileWithoutToken_shouldReturn401(AuthTest.java:166)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getProfileWithoutToken_shouldReturn401 -->
+        <test-method signature="updateSellerProfile_shouldReturn200()[pri:8, instance:com.auctionsabha.tests.AuthTest@12968227]" started-at="2026-05-07T13:15:12 IST" name="updateSellerProfile_shouldReturn200" finished-at="2026-05-07T13:15:16 IST" duration-ms="3717" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateSellerProfile_shouldReturn200 -->
+        <test-method signature="updateProfileWithoutToken_shouldBeRejected()[pri:9, instance:com.auctionsabha.tests.AuthTest@12968227]" started-at="2026-05-07T13:15:16 IST" name="updateProfileWithoutToken_shouldBeRejected" finished-at="2026-05-07T13:15:20 IST" duration-ms="3731" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Profile update without token should fail
+Expected: (is <401> or is <403>)
+     but: was <200>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Profile update without token should fail
+Expected: (is <401> or is <403>)
+     but: was <200>
+at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+at com.auctionsabha.tests.AuthTest.updateProfileWithoutToken_shouldBeRejected(AuthTest.java:207)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateProfileWithoutToken_shouldBeRejected -->
+        <test-method signature="changeBuyerPassword_thenRevert_shouldReturn200()[pri:10, instance:com.auctionsabha.tests.AuthTest@12968227]" started-at="2026-05-07T13:15:20 IST" name="changeBuyerPassword_thenRevert_shouldReturn200" finished-at="2026-05-07T13:15:29 IST" duration-ms="9403" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- changeBuyerPassword_thenRevert_shouldReturn200 -->
+        <test-method signature="changePasswordWithWrongOldPassword_shouldFail()[pri:11, instance:com.auctionsabha.tests.AuthTest@12968227]" started-at="2026-05-07T13:15:29 IST" name="changePasswordWithWrongOldPassword_shouldFail" finished-at="2026-05-07T13:15:31 IST" duration-ms="2107" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- changePasswordWithWrongOldPassword_shouldFail -->
+        <test-method signature="loginAdmin_shouldReturnExpectedFields()[pri:12, instance:com.auctionsabha.tests.AuthTest@12968227]" started-at="2026-05-07T13:15:31 IST" name="loginAdmin_shouldReturnExpectedFields" finished-at="2026-05-07T13:15:32 IST" duration-ms="1178" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAdmin_shouldReturnExpectedFields -->
+      </class> <!-- com.auctionsabha.tests.AuthTest -->
+    </test> <!-- Auth Tests -->
+    <test started-at="2026-05-07T13:15:33 IST" name="Product Tests" finished-at="2026-05-07T13:15:58 IST" duration-ms="25915">
+      <class name="com.auctionsabha.tests.ProductTest">
+        <test-method signature="getCategories_shouldReturn200WithList()[pri:1, instance:com.auctionsabha.tests.ProductTest@fb6097b]" started-at="2026-05-07T13:15:33 IST" name="getCategories_shouldReturn200WithList" finished-at="2026-05-07T13:15:35 IST" duration-ms="2056" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCategories_shouldReturn200WithList -->
+        <test-method signature="getCategories_withoutToken_shouldBeRejected()[pri:2, instance:com.auctionsabha.tests.ProductTest@fb6097b]" started-at="2026-05-07T13:15:35 IST" name="getCategories_withoutToken_shouldBeRejected" finished-at="2026-05-07T13:15:35 IST" duration-ms="450" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCategories_withoutToken_shouldBeRejected -->
+        <test-method signature="getAllProducts_shouldReturn200()[pri:3, instance:com.auctionsabha.tests.ProductTest@fb6097b]" started-at="2026-05-07T13:15:35 IST" name="getAllProducts_shouldReturn200" finished-at="2026-05-07T13:15:37 IST" duration-ms="2266" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllProducts_shouldReturn200 -->
+        <test-method signature="getProductsByCategory_shouldReturn200()[pri:4, instance:com.auctionsabha.tests.ProductTest@fb6097b]" started-at="2026-05-07T13:15:37 IST" name="getProductsByCategory_shouldReturn200" finished-at="2026-05-07T13:15:39 IST" depends-on-methods="com.auctionsabha.tests.ProductTest.getCategories_shouldReturn200WithList" duration-ms="1811" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getProductsByCategory_shouldReturn200 -->
+        <test-method signature="searchProductsByName_watch_shouldReturn200()[pri:5, instance:com.auctionsabha.tests.ProductTest@fb6097b]" started-at="2026-05-07T13:15:39 IST" name="searchProductsByName_watch_shouldReturn200" finished-at="2026-05-07T13:15:41 IST" duration-ms="2061" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProductsByName_watch_shouldReturn200 -->
+        <test-method signature="searchProductsWithEmptyName_shouldReturn200Or400()[pri:6, instance:com.auctionsabha.tests.ProductTest@fb6097b]" started-at="2026-05-07T13:15:41 IST" name="searchProductsWithEmptyName_shouldReturn200Or400" finished-at="2026-05-07T13:15:44 IST" duration-ms="2334" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProductsWithEmptyName_shouldReturn200Or400 -->
+        <test-method signature="submitProduct_asSeller_shouldReturn201()[pri:7, instance:com.auctionsabha.tests.ProductTest@fb6097b]" started-at="2026-05-07T13:15:44 IST" name="submitProduct_asSeller_shouldReturn201" finished-at="2026-05-07T13:15:49 IST" duration-ms="5541" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitProduct_asSeller_shouldReturn201 -->
+        <test-method signature="submitProductWithoutToken_shouldBeRejected()[pri:8, instance:com.auctionsabha.tests.ProductTest@fb6097b]" started-at="2026-05-07T13:15:49 IST" name="submitProductWithoutToken_shouldBeRejected" finished-at="2026-05-07T13:15:50 IST" duration-ms="386" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitProductWithoutToken_shouldBeRejected -->
+        <test-method signature="submitProductWithMissingFields_shouldReturn400()[pri:9, instance:com.auctionsabha.tests.ProductTest@fb6097b]" started-at="2026-05-07T13:15:50 IST" name="submitProductWithMissingFields_shouldReturn400" finished-at="2026-05-07T13:15:53 IST" duration-ms="3294" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitProductWithMissingFields_shouldReturn400 -->
+        <test-method signature="getPendingProducts_asVerifier_shouldReturn200()[pri:10, instance:com.auctionsabha.tests.ProductTest@fb6097b]" started-at="2026-05-07T13:15:53 IST" name="getPendingProducts_asVerifier_shouldReturn200" finished-at="2026-05-07T13:15:53 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getPendingProducts_asVerifier_shouldReturn200 -->
+        <test-method signature="getPendingProducts_asBuyer_shouldBeForbidden()[pri:11, instance:com.auctionsabha.tests.ProductTest@fb6097b]" started-at="2026-05-07T13:15:53 IST" name="getPendingProducts_asBuyer_shouldBeForbidden" finished-at="2026-05-07T13:15:54 IST" duration-ms="1374" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[BUYER should not access pending products
+Expected: (is <401> or is <403>)
+     but: was <200>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: BUYER should not access pending products
+Expected: (is <401> or is <403>)
+     but: was <200>
+at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+at com.auctionsabha.tests.ProductTest.getPendingProducts_asBuyer_shouldBeForbidden(ProductTest.java:277)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getPendingProducts_asBuyer_shouldBeForbidden -->
+        <test-method signature="reviewProduct_approve_asVerifier_shouldReturn200()[pri:12, instance:com.auctionsabha.tests.ProductTest@fb6097b]" started-at="2026-05-07T13:15:54 IST" name="reviewProduct_approve_asVerifier_shouldReturn200" finished-at="2026-05-07T13:15:54 IST" depends-on-methods="com.auctionsabha.tests.ProductTest.getPendingProducts_asVerifier_shouldReturn200" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reviewProduct_approve_asVerifier_shouldReturn200 -->
+        <test-method signature="reviewProduct_asBuyer_shouldBeForbidden()[pri:13, instance:com.auctionsabha.tests.ProductTest@fb6097b]" started-at="2026-05-07T13:15:54 IST" name="reviewProduct_asBuyer_shouldBeForbidden" finished-at="2026-05-07T13:15:58 IST" duration-ms="4258" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[BUYER should not review products
+Expected: (is <401> or is <403>)
+     but: was <200>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: BUYER should not review products
+Expected: (is <401> or is <403>)
+     but: was <200>
+at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+at com.auctionsabha.tests.ProductTest.reviewProduct_asBuyer_shouldBeForbidden(ProductTest.java:328)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reviewProduct_asBuyer_shouldBeForbidden -->
+      </class> <!-- com.auctionsabha.tests.ProductTest -->
+    </test> <!-- Product Tests -->
+    <test started-at="2026-05-07T13:15:58 IST" name="Auction Tests" finished-at="2026-05-07T13:16:03 IST" duration-ms="4457">
+      <class name="com.auctionsabha.tests.AuctionTest">
+        <test-method signature="getAllAuctions_shouldReturn200()[pri:1, instance:com.auctionsabha.tests.AuctionTest@a18649a]" started-at="2026-05-07T13:15:58 IST" name="getAllAuctions_shouldReturn200" finished-at="2026-05-07T13:16:00 IST" duration-ms="1052" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllAuctions_shouldReturn200 -->
+        <test-method signature="getAllAuctions_withoutToken_shouldBeRejected()[pri:2, instance:com.auctionsabha.tests.AuctionTest@a18649a]" started-at="2026-05-07T13:16:00 IST" name="getAllAuctions_withoutToken_shouldBeRejected" finished-at="2026-05-07T13:16:00 IST" duration-ms="334" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllAuctions_withoutToken_shouldBeRejected -->
+        <test-method signature="getAuctionLeaderboard_shouldReturn200()[pri:3, instance:com.auctionsabha.tests.AuctionTest@a18649a]" started-at="2026-05-07T13:16:00 IST" name="getAuctionLeaderboard_shouldReturn200" finished-at="2026-05-07T13:16:01 IST" depends-on-methods="com.auctionsabha.tests.AuctionTest.getAllAuctions_shouldReturn200" duration-ms="838" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAuctionLeaderboard_shouldReturn200 -->
+        <test-method signature="getLeaderboard_nonExistentAuction_shouldReturn404()[pri:4, instance:com.auctionsabha.tests.AuctionTest@a18649a]" started-at="2026-05-07T13:16:01 IST" name="getLeaderboard_nonExistentAuction_shouldReturn404" finished-at="2026-05-07T13:16:02 IST" duration-ms="837" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Non-existent auction leaderboard should return 404
+Expected: (is <404> or is <400>)
+     but: was <200>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Non-existent auction leaderboard should return 404
+Expected: (is <404> or is <400>)
+     but: was <200>
+at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+at com.auctionsabha.tests.AuctionTest.getLeaderboard_nonExistentAuction_shouldReturn404(AuctionTest.java:111)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getLeaderboard_nonExistentAuction_shouldReturn404 -->
+        <test-method signature="getLeaderboard_withoutToken_shouldBeRejected()[pri:5, instance:com.auctionsabha.tests.AuctionTest@a18649a]" started-at="2026-05-07T13:16:02 IST" name="getLeaderboard_withoutToken_shouldBeRejected" finished-at="2026-05-07T13:16:02 IST" duration-ms="393" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getLeaderboard_withoutToken_shouldBeRejected -->
+        <test-method signature="getAuctionSlots_specificDate_shouldReturn200()[pri:6, instance:com.auctionsabha.tests.AuctionTest@a18649a]" started-at="2026-05-07T13:16:02 IST" name="getAuctionSlots_specificDate_shouldReturn200" finished-at="2026-05-07T13:16:02 IST" duration-ms="330" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAuctionSlots_specificDate_shouldReturn200 -->
+        <test-method signature="getAuctionSlots_futureDate_shouldReturn200()[pri:7, instance:com.auctionsabha.tests.AuctionTest@a18649a]" started-at="2026-05-07T13:16:02 IST" name="getAuctionSlots_futureDate_shouldReturn200" finished-at="2026-05-07T13:16:03 IST" duration-ms="311" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAuctionSlots_futureDate_shouldReturn200 -->
+        <test-method signature="getAuctionSlots_withoutDate_shouldReturn400OrDefault()[pri:8, instance:com.auctionsabha.tests.AuctionTest@a18649a]" started-at="2026-05-07T13:16:03 IST" name="getAuctionSlots_withoutDate_shouldReturn400OrDefault" finished-at="2026-05-07T13:16:03 IST" duration-ms="326" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Auction slots without date param should return 200 or 400
+Expected: (is <200> or is <400>)
+     but: was <403>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Auction slots without date param should return 200 or 400
+Expected: (is <200> or is <400>)
+     but: was <403>
+at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+at com.auctionsabha.tests.AuctionTest.getAuctionSlots_withoutDate_shouldReturn400OrDefault(AuctionTest.java:173)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAuctionSlots_withoutDate_shouldReturn400OrDefault -->
+      </class> <!-- com.auctionsabha.tests.AuctionTest -->
+    </test> <!-- Auction Tests -->
+    <test started-at="2026-05-07T13:16:03 IST" name="Admin Tests" finished-at="2026-05-07T13:16:20 IST" duration-ms="16713">
+      <class name="com.auctionsabha.tests.AdminTest">
+        <test-method is-config="true" signature="resolveAuctionId()[pri:0, instance:com.auctionsabha.tests.AdminTest@7fd8c559]" started-at="2026-05-07T13:16:03 IST" name="resolveAuctionId" finished-at="2026-05-07T13:16:03 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resolveAuctionId -->
+        <test-method signature="getAdminProducts_shouldReturn200()[pri:1, instance:com.auctionsabha.tests.AdminTest@7fd8c559]" started-at="2026-05-07T13:16:03 IST" name="getAdminProducts_shouldReturn200" finished-at="2026-05-07T13:16:06 IST" duration-ms="2530" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAdminProducts_shouldReturn200 -->
+        <test-method signature="getAdminProducts_asSeller_shouldBeForbidden()[pri:2, instance:com.auctionsabha.tests.AdminTest@7fd8c559]" started-at="2026-05-07T13:16:06 IST" name="getAdminProducts_asSeller_shouldBeForbidden" finished-at="2026-05-07T13:16:06 IST" duration-ms="349" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAdminProducts_asSeller_shouldBeForbidden -->
+        <test-method signature="getAdminProducts_withoutToken_shouldBeRejected()[pri:3, instance:com.auctionsabha.tests.AdminTest@7fd8c559]" started-at="2026-05-07T13:16:06 IST" name="getAdminProducts_withoutToken_shouldBeRejected" finished-at="2026-05-07T13:16:06 IST" duration-ms="345" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAdminProducts_withoutToken_shouldBeRejected -->
+        <test-method signature="startAuction_asAdmin_shouldReturn200()[pri:4, instance:com.auctionsabha.tests.AdminTest@7fd8c559]" started-at="2026-05-07T13:16:06 IST" name="startAuction_asAdmin_shouldReturn200" finished-at="2026-05-07T13:16:08 IST" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startAuction_asAdmin_shouldReturn200 -->
+        <test-method signature="startAuction_asBuyer_shouldBeForbidden()[pri:5, instance:com.auctionsabha.tests.AdminTest@7fd8c559]" started-at="2026-05-07T13:16:08 IST" name="startAuction_asBuyer_shouldBeForbidden" finished-at="2026-05-07T13:16:09 IST" duration-ms="1139" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startAuction_asBuyer_shouldBeForbidden -->
+        <test-method signature="startAuction_twice_shouldReturn400()[pri:6, instance:com.auctionsabha.tests.AdminTest@7fd8c559]" started-at="2026-05-07T13:16:09 IST" name="startAuction_twice_shouldReturn400" finished-at="2026-05-07T13:16:13 IST" duration-ms="3874" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startAuction_twice_shouldReturn400 -->
+        <test-method signature="startNonExistentAuction_shouldReturn404()[pri:7, instance:com.auctionsabha.tests.AdminTest@7fd8c559]" started-at="2026-05-07T13:16:13 IST" name="startNonExistentAuction_shouldReturn404" finished-at="2026-05-07T13:16:15 IST" duration-ms="2001" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startNonExistentAuction_shouldReturn404 -->
+        <test-method signature="stopAuction_asAdmin_shouldReturn200()[pri:8, instance:com.auctionsabha.tests.AdminTest@7fd8c559]" started-at="2026-05-07T13:16:15 IST" name="stopAuction_asAdmin_shouldReturn200" finished-at="2026-05-07T13:16:17 IST" duration-ms="2052" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Stop auction should return 200 or 400
+Expected: (is <200> or is <201> or is <400>)
+     but: was <409>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Stop auction should return 200 or 400
+Expected: (is <200> or is <201> or is <400>)
+     but: was <409>
+at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+at com.auctionsabha.tests.AdminTest.stopAuction_asAdmin_shouldReturn200(AdminTest.java:168)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopAuction_asAdmin_shouldReturn200 -->
+        <test-method signature="stopAuction_asSeller_shouldBeForbidden()[pri:9, instance:com.auctionsabha.tests.AdminTest@7fd8c559]" started-at="2026-05-07T13:16:17 IST" name="stopAuction_asSeller_shouldBeForbidden" finished-at="2026-05-07T13:16:18 IST" duration-ms="463" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopAuction_asSeller_shouldBeForbidden -->
+        <test-method signature="stopNonExistentAuction_shouldReturn404()[pri:10, instance:com.auctionsabha.tests.AdminTest@7fd8c559]" started-at="2026-05-07T13:16:18 IST" name="stopNonExistentAuction_shouldReturn404" finished-at="2026-05-07T13:16:20 IST" duration-ms="1894" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopNonExistentAuction_shouldReturn404 -->
+      </class> <!-- com.auctionsabha.tests.AdminTest -->
+    </test> <!-- Admin Tests -->
+    <test started-at="2026-05-07T13:16:20 IST" name="Wallet Tests" finished-at="2026-05-07T13:16:48 IST" duration-ms="28348">
+      <class name="com.auctionsabha.tests.WalletTest">
+        <test-method signature="getBuyerWallet_shouldReturn200WithBalance()[pri:1, instance:com.auctionsabha.tests.WalletTest@41b1f51e]" started-at="2026-05-07T13:16:20 IST" name="getBuyerWallet_shouldReturn200WithBalance" finished-at="2026-05-07T13:16:20 IST" duration-ms="771" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getBuyerWallet_shouldReturn200WithBalance -->
+        <test-method signature="getWallet_withoutToken_shouldBeRejected()[pri:2, instance:com.auctionsabha.tests.WalletTest@41b1f51e]" started-at="2026-05-07T13:16:20 IST" name="getWallet_withoutToken_shouldBeRejected" finished-at="2026-05-07T13:16:21 IST" duration-ms="308" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getWallet_withoutToken_shouldBeRejected -->
+        <test-method signature="getWallet_nonExistentUser_shouldReturn404()[pri:3, instance:com.auctionsabha.tests.WalletTest@41b1f51e]" started-at="2026-05-07T13:16:21 IST" name="getWallet_nonExistentUser_shouldReturn404" finished-at="2026-05-07T13:16:23 IST" duration-ms="1997" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getWallet_nonExistentUser_shouldReturn404 -->
+        <test-method signature="depositToBuyerWallet_shouldReturn200()[pri:4, instance:com.auctionsabha.tests.WalletTest@41b1f51e]" started-at="2026-05-07T13:16:23 IST" name="depositToBuyerWallet_shouldReturn200" finished-at="2026-05-07T13:16:26 IST" duration-ms="2862" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- depositToBuyerWallet_shouldReturn200 -->
+        <test-method signature="depositZeroAmount_shouldReturn400()[pri:5, instance:com.auctionsabha.tests.WalletTest@41b1f51e]" started-at="2026-05-07T13:16:26 IST" name="depositZeroAmount_shouldReturn400" finished-at="2026-05-07T13:16:28 IST" duration-ms="2744" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Zero deposit should fail
+Expected: (is <400> or is <422>)
+     but: was <200>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Zero deposit should fail
+Expected: (is <400> or is <422>)
+     but: was <200>
+at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+at com.auctionsabha.tests.WalletTest.depositZeroAmount_shouldReturn400(WalletTest.java:118)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- depositZeroAmount_shouldReturn400 -->
+        <test-method signature="depositNegativeAmount_shouldReturn400()[pri:6, instance:com.auctionsabha.tests.WalletTest@41b1f51e]" started-at="2026-05-07T13:16:28 IST" name="depositNegativeAmount_shouldReturn400" finished-at="2026-05-07T13:16:31 IST" duration-ms="2786" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Negative deposit should fail
+Expected: (is <400> or is <422>)
+     but: was <200>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Negative deposit should fail
+Expected: (is <400> or is <422>)
+     but: was <200>
+at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+at com.auctionsabha.tests.WalletTest.depositNegativeAmount_shouldReturn400(WalletTest.java:136)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- depositNegativeAmount_shouldReturn400 -->
+        <test-method signature="withdrawFromBuyerWallet_shouldReturn200()[pri:7, instance:com.auctionsabha.tests.WalletTest@41b1f51e]" started-at="2026-05-07T13:16:31 IST" name="withdrawFromBuyerWallet_shouldReturn200" finished-at="2026-05-07T13:16:34 IST" depends-on-methods="com.auctionsabha.tests.WalletTest.depositToBuyerWallet_shouldReturn200" duration-ms="2534" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- withdrawFromBuyerWallet_shouldReturn200 -->
+        <test-method signature="withdrawInsufficientBalance_shouldReturn400()[pri:8, instance:com.auctionsabha.tests.WalletTest@41b1f51e]" started-at="2026-05-07T13:16:34 IST" name="withdrawInsufficientBalance_shouldReturn400" finished-at="2026-05-07T13:16:34 IST" duration-ms="617" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Withdraw with insufficient balance should fail
+Expected: (is <400> or is <422>)
+     but: was <409>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Withdraw with insufficient balance should fail
+Expected: (is <400> or is <422>)
+     but: was <409>
+at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+at com.auctionsabha.tests.WalletTest.withdrawInsufficientBalance_shouldReturn400(WalletTest.java:176)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- withdrawInsufficientBalance_shouldReturn400 -->
+        <test-method signature="withdrawWithoutToken_shouldBeRejected()[pri:9, instance:com.auctionsabha.tests.WalletTest@41b1f51e]" started-at="2026-05-07T13:16:34 IST" name="withdrawWithoutToken_shouldBeRejected" finished-at="2026-05-07T13:16:35 IST" duration-ms="573" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- withdrawWithoutToken_shouldBeRejected -->
+        <test-method signature="holdBidAmount_shouldReturn200Or400()[pri:10, instance:com.auctionsabha.tests.WalletTest@41b1f51e]" started-at="2026-05-07T13:16:35 IST" name="holdBidAmount_shouldReturn200Or400" finished-at="2026-05-07T13:16:38 IST" duration-ms="2604" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- holdBidAmount_shouldReturn200Or400 -->
+        <test-method signature="holdBidInsufficientBalance_shouldReturn400()[pri:11, instance:com.auctionsabha.tests.WalletTest@41b1f51e]" started-at="2026-05-07T13:16:38 IST" name="holdBidInsufficientBalance_shouldReturn400" finished-at="2026-05-07T13:16:38 IST" duration-ms="846" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- holdBidInsufficientBalance_shouldReturn400 -->
+        <test-method signature="refundBuyer_shouldReturn200Or400()[pri:12, instance:com.auctionsabha.tests.WalletTest@41b1f51e]" started-at="2026-05-07T13:16:38 IST" name="refundBuyer_shouldReturn200Or400" finished-at="2026-05-07T13:16:41 IST" duration-ms="2647" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- refundBuyer_shouldReturn200Or400 -->
+        <test-method signature="payoutSeller_shouldReturn200Or400()[pri:13, instance:com.auctionsabha.tests.WalletTest@41b1f51e]" started-at="2026-05-07T13:16:41 IST" name="payoutSeller_shouldReturn200Or400" finished-at="2026-05-07T13:16:44 IST" duration-ms="2794" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- payoutSeller_shouldReturn200Or400 -->
+        <test-method signature="getBuyerTransactions_shouldReturn200()[pri:14, instance:com.auctionsabha.tests.WalletTest@41b1f51e]" started-at="2026-05-07T13:16:44 IST" name="getBuyerTransactions_shouldReturn200" finished-at="2026-05-07T13:16:45 IST" duration-ms="1099" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getBuyerTransactions_shouldReturn200 -->
+        <test-method signature="getTransactions_withoutToken_shouldBeRejected()[pri:15, instance:com.auctionsabha.tests.WalletTest@41b1f51e]" started-at="2026-05-07T13:16:45 IST" name="getTransactions_withoutToken_shouldBeRejected" finished-at="2026-05-07T13:16:45 IST" duration-ms="365" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTransactions_withoutToken_shouldBeRejected -->
+        <test-method signature="depositToSellerWallet_shouldReturn200()[pri:16, instance:com.auctionsabha.tests.WalletTest@41b1f51e]" started-at="2026-05-07T13:16:45 IST" name="depositToSellerWallet_shouldReturn200" finished-at="2026-05-07T13:16:48 IST" duration-ms="2730" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- depositToSellerWallet_shouldReturn200 -->
+      </class> <!-- com.auctionsabha.tests.WalletTest -->
+    </test> <!-- Wallet Tests -->
+    <test started-at="2026-05-07T13:16:48 IST" name="Bid Tests" finished-at="2026-05-07T13:16:52 IST" duration-ms="4209">
+      <class name="com.auctionsabha.tests.BidTest">
+        <test-method signature="getMyBids_asBuyer_shouldReturn200()[pri:1, instance:com.auctionsabha.tests.BidTest@66420549]" started-at="2026-05-07T13:16:48 IST" name="getMyBids_asBuyer_shouldReturn200" finished-at="2026-05-07T13:16:49 IST" duration-ms="840" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getMyBids_asBuyer_shouldReturn200 -->
+        <test-method signature="getMyBids_withoutToken_shouldBeRejected()[pri:2, instance:com.auctionsabha.tests.BidTest@66420549]" started-at="2026-05-07T13:16:49 IST" name="getMyBids_withoutToken_shouldBeRejected" finished-at="2026-05-07T13:16:49 IST" duration-ms="349" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getMyBids_withoutToken_shouldBeRejected -->
+        <test-method signature="getMyBids_asSeller_shouldReturn200Or403()[pri:3, instance:com.auctionsabha.tests.BidTest@66420549]" started-at="2026-05-07T13:16:49 IST" name="getMyBids_asSeller_shouldReturn200Or403" finished-at="2026-05-07T13:16:50 IST" duration-ms="848" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getMyBids_asSeller_shouldReturn200Or403 -->
+        <test-method signature="getMyBids_asAdmin_shouldReturn200()[pri:4, instance:com.auctionsabha.tests.BidTest@66420549]" started-at="2026-05-07T13:16:50 IST" name="getMyBids_asAdmin_shouldReturn200" finished-at="2026-05-07T13:16:51 IST" duration-ms="891" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getMyBids_asAdmin_shouldReturn200 -->
+        <test-method signature="getMyBids_nonExistentBuyer_shouldReturn200Or404()[pri:5, instance:com.auctionsabha.tests.BidTest@66420549]" started-at="2026-05-07T13:16:51 IST" name="getMyBids_nonExistentBuyer_shouldReturn200Or404" finished-at="2026-05-07T13:16:52 IST" duration-ms="829" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getMyBids_nonExistentBuyer_shouldReturn200Or404 -->
+        <test-method signature="getMyBids_withoutBuyerIdParam_shouldReturn400OrDefault()[pri:6, instance:com.auctionsabha.tests.BidTest@66420549]" started-at="2026-05-07T13:16:52 IST" name="getMyBids_withoutBuyerIdParam_shouldReturn400OrDefault" finished-at="2026-05-07T13:16:52 IST" duration-ms="416" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[My bids without buyerId should return 200 or 400
+Expected: (is <200> or is <400>)
+     but: was <403>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: My bids without buyerId should return 200 or 400
+Expected: (is <200> or is <400>)
+     but: was <403>
+at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+at com.auctionsabha.tests.BidTest.getMyBids_withoutBuyerIdParam_shouldReturn400OrDefault(BidTest.java:121)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getMyBids_withoutBuyerIdParam_shouldReturn400OrDefault -->
+      </class> <!-- com.auctionsabha.tests.BidTest -->
+    </test> <!-- Bid Tests -->
+    <test started-at="2026-05-07T13:16:52 IST" name="Verifier Application Tests" finished-at="2026-05-07T13:17:07 IST" duration-ms="14549">
+      <class name="com.auctionsabha.tests.VerifierApplicationTest">
+        <test-method signature="submitNewVerifierApplication_shouldReturn200Or201()[pri:1, instance:com.auctionsabha.tests.VerifierApplicationTest@2e807c54]" started-at="2026-05-07T13:16:52 IST" name="submitNewVerifierApplication_shouldReturn200Or201" finished-at="2026-05-07T13:16:54 IST" duration-ms="2065" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitNewVerifierApplication_shouldReturn200Or201 -->
+        <test-method is-config="true" signature="resolveApplicationId()[pri:0, instance:com.auctionsabha.tests.VerifierApplicationTest@2e807c54]" started-at="2026-05-07T13:16:52 IST" name="resolveApplicationId" finished-at="2026-05-07T13:16:52 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resolveApplicationId -->
+        <test-method signature="submitDuplicateVerifierApplication_shouldReturn400Or409()[pri:2, instance:com.auctionsabha.tests.VerifierApplicationTest@2e807c54]" started-at="2026-05-07T13:16:54 IST" name="submitDuplicateVerifierApplication_shouldReturn400Or409" finished-at="2026-05-07T13:16:55 IST" duration-ms="651" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitDuplicateVerifierApplication_shouldReturn400Or409 -->
+        <test-method signature="submitVerifierApplicationWithMissingFields_shouldReturn400()[pri:3, instance:com.auctionsabha.tests.VerifierApplicationTest@2e807c54]" started-at="2026-05-07T13:16:55 IST" name="submitVerifierApplicationWithMissingFields_shouldReturn400" finished-at="2026-05-07T13:16:56 IST" duration-ms="852" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitVerifierApplicationWithMissingFields_shouldReturn400 -->
+        <test-method signature="getAllVerifierApplications_asAdmin_shouldReturn200()[pri:4, instance:com.auctionsabha.tests.VerifierApplicationTest@2e807c54]" started-at="2026-05-07T13:16:56 IST" name="getAllVerifierApplications_asAdmin_shouldReturn200" finished-at="2026-05-07T13:16:57 IST" duration-ms="844" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllVerifierApplications_asAdmin_shouldReturn200 -->
+        <test-method signature="getAllVerifierApplications_asBuyer_shouldBeForbidden()[pri:5, instance:com.auctionsabha.tests.VerifierApplicationTest@2e807c54]" started-at="2026-05-07T13:16:57 IST" name="getAllVerifierApplications_asBuyer_shouldBeForbidden" finished-at="2026-05-07T13:16:57 IST" duration-ms="332" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllVerifierApplications_asBuyer_shouldBeForbidden -->
+        <test-method signature="getAllVerifierApplications_withoutToken_shouldBeRejected()[pri:6, instance:com.auctionsabha.tests.VerifierApplicationTest@2e807c54]" started-at="2026-05-07T13:16:57 IST" name="getAllVerifierApplications_withoutToken_shouldBeRejected" finished-at="2026-05-07T13:16:57 IST" duration-ms="315" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllVerifierApplications_withoutToken_shouldBeRejected -->
+        <test-method signature="getPendingVerifierApplications_asAdmin_shouldReturn200()[pri:7, instance:com.auctionsabha.tests.VerifierApplicationTest@2e807c54]" started-at="2026-05-07T13:16:57 IST" name="getPendingVerifierApplications_asAdmin_shouldReturn200" finished-at="2026-05-07T13:16:58 IST" duration-ms="831" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getPendingVerifierApplications_asAdmin_shouldReturn200 -->
+        <test-method signature="getPendingVerifierApplications_asSeller_shouldBeForbidden()[pri:8, instance:com.auctionsabha.tests.VerifierApplicationTest@2e807c54]" started-at="2026-05-07T13:16:58 IST" name="getPendingVerifierApplications_asSeller_shouldBeForbidden" finished-at="2026-05-07T13:16:59 IST" duration-ms="316" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getPendingVerifierApplications_asSeller_shouldBeForbidden -->
+        <test-method signature="approveVerifierApplication_asBuyer_shouldBeForbidden()[pri:10, instance:com.auctionsabha.tests.VerifierApplicationTest@2e807c54]" started-at="2026-05-07T13:16:59 IST" name="approveVerifierApplication_asBuyer_shouldBeForbidden" finished-at="2026-05-07T13:16:59 IST" duration-ms="315" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- approveVerifierApplication_asBuyer_shouldBeForbidden -->
+        <test-method signature="approveVerifierApplication_asAdmin_shouldReturn200WithTempPassword()[pri:9, instance:com.auctionsabha.tests.VerifierApplicationTest@2e807c54]" started-at="2026-05-07T13:16:59 IST" name="approveVerifierApplication_asAdmin_shouldReturn200WithTempPassword" finished-at="2026-05-07T13:16:59 IST" depends-on-methods="com.auctionsabha.tests.VerifierApplicationTest.submitNewVerifierApplication_shouldReturn200Or201" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- approveVerifierApplication_asAdmin_shouldReturn200WithTempPassword -->
+        <test-method signature="approveNonExistentApplication_shouldReturn404()[pri:11, instance:com.auctionsabha.tests.VerifierApplicationTest@2e807c54]" started-at="2026-05-07T13:16:59 IST" name="approveNonExistentApplication_shouldReturn404" finished-at="2026-05-07T13:17:01 IST" duration-ms="2046" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- approveNonExistentApplication_shouldReturn404 -->
+        <test-method signature="rejectVerifierApplication_asAdmin_shouldReturn200()[pri:12, instance:com.auctionsabha.tests.VerifierApplicationTest@2e807c54]" started-at="2026-05-07T13:17:01 IST" name="rejectVerifierApplication_asAdmin_shouldReturn200" finished-at="2026-05-07T13:17:05 IST" depends-on-methods="com.auctionsabha.tests.VerifierApplicationTest.submitNewVerifierApplication_shouldReturn200Or201" duration-ms="3680" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- rejectVerifierApplication_asAdmin_shouldReturn200 -->
+        <test-method signature="rejectVerifierApplication_asBuyer_shouldBeForbidden()[pri:13, instance:com.auctionsabha.tests.VerifierApplicationTest@2e807c54]" started-at="2026-05-07T13:17:05 IST" name="rejectVerifierApplication_asBuyer_shouldBeForbidden" finished-at="2026-05-07T13:17:05 IST" duration-ms="383" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- rejectVerifierApplication_asBuyer_shouldBeForbidden -->
+        <test-method signature="rejectNonExistentApplication_shouldReturn404()[pri:14, instance:com.auctionsabha.tests.VerifierApplicationTest@2e807c54]" started-at="2026-05-07T13:17:05 IST" name="rejectNonExistentApplication_shouldReturn404" finished-at="2026-05-07T13:17:07 IST" duration-ms="1866" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- rejectNonExistentApplication_shouldReturn404 -->
+      </class> <!-- com.auctionsabha.tests.VerifierApplicationTest -->
+      <class name="com.auctionsabha.config.TestConfig">
+        <test-method is-config="true" signature="globalSetup()[pri:0, instance:com.auctionsabha.config.TestConfig@6137cf6e]" started-at="2026-05-07T13:14:27 IST" name="globalSetup" finished-at="2026-05-07T13:14:47 IST" duration-ms="20929" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- globalSetup -->
+      </class> <!-- com.auctionsabha.config.TestConfig -->
+    </test> <!-- Verifier Application Tests -->
+  </suite> <!-- Auction Sabha API Test Suite -->
+</testng-results>

@@ -1,0 +1,150 @@
+<html>
+<head>
+<title>TestNG:  Verifier Application Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Verifier Application Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>14/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu May 07 13:16:52 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>14 seconds (14549 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.auctionsabha.tests.VerifierApplicationTest.getAllVerifierApplications_asAdmin_shouldReturn200()'><b>getAllVerifierApplications_asAdmin_shouldReturn200</b><br>Test class: com.auctionsabha.tests.VerifierApplicationTest</td>
+<td></td>
+<td>0</td>
+<td>com.auctionsabha.tests.VerifierApplicationTest@2e807c54</td></tr>
+<tr>
+<td title='com.auctionsabha.tests.VerifierApplicationTest.getAllVerifierApplications_withoutToken_shouldBeRejected()'><b>getAllVerifierApplications_withoutToken_shouldBeRejected</b><br>Test class: com.auctionsabha.tests.VerifierApplicationTest</td>
+<td></td>
+<td>0</td>
+<td>com.auctionsabha.tests.VerifierApplicationTest@2e807c54</td></tr>
+<tr>
+<td title='com.auctionsabha.tests.VerifierApplicationTest.getPendingVerifierApplications_asSeller_shouldBeForbidden()'><b>getPendingVerifierApplications_asSeller_shouldBeForbidden</b><br>Test class: com.auctionsabha.tests.VerifierApplicationTest</td>
+<td></td>
+<td>0</td>
+<td>com.auctionsabha.tests.VerifierApplicationTest@2e807c54</td></tr>
+<tr>
+<td title='com.auctionsabha.tests.VerifierApplicationTest.approveVerifierApplication_asBuyer_shouldBeForbidden()'><b>approveVerifierApplication_asBuyer_shouldBeForbidden</b><br>Test class: com.auctionsabha.tests.VerifierApplicationTest</td>
+<td></td>
+<td>0</td>
+<td>com.auctionsabha.tests.VerifierApplicationTest@2e807c54</td></tr>
+<tr>
+<td title='com.auctionsabha.tests.VerifierApplicationTest.approveNonExistentApplication_shouldReturn404()'><b>approveNonExistentApplication_shouldReturn404</b><br>Test class: com.auctionsabha.tests.VerifierApplicationTest</td>
+<td></td>
+<td>2</td>
+<td>com.auctionsabha.tests.VerifierApplicationTest@2e807c54</td></tr>
+<tr>
+<td title='com.auctionsabha.tests.VerifierApplicationTest.submitVerifierApplicationWithMissingFields_shouldReturn400()'><b>submitVerifierApplicationWithMissingFields_shouldReturn400</b><br>Test class: com.auctionsabha.tests.VerifierApplicationTest</td>
+<td></td>
+<td>0</td>
+<td>com.auctionsabha.tests.VerifierApplicationTest@2e807c54</td></tr>
+<tr>
+<td title='com.auctionsabha.tests.VerifierApplicationTest.submitDuplicateVerifierApplication_shouldReturn400Or409()'><b>submitDuplicateVerifierApplication_shouldReturn400Or409</b><br>Test class: com.auctionsabha.tests.VerifierApplicationTest</td>
+<td></td>
+<td>0</td>
+<td>com.auctionsabha.tests.VerifierApplicationTest@2e807c54</td></tr>
+<tr>
+<td title='com.auctionsabha.tests.VerifierApplicationTest.submitNewVerifierApplication_shouldReturn200Or201()'><b>submitNewVerifierApplication_shouldReturn200Or201</b><br>Test class: com.auctionsabha.tests.VerifierApplicationTest</td>
+<td></td>
+<td>2</td>
+<td>com.auctionsabha.tests.VerifierApplicationTest@2e807c54</td></tr>
+<tr>
+<td title='com.auctionsabha.tests.VerifierApplicationTest.rejectVerifierApplication_asBuyer_shouldBeForbidden()'><b>rejectVerifierApplication_asBuyer_shouldBeForbidden</b><br>Test class: com.auctionsabha.tests.VerifierApplicationTest</td>
+<td></td>
+<td>0</td>
+<td>com.auctionsabha.tests.VerifierApplicationTest@2e807c54</td></tr>
+<tr>
+<td title='com.auctionsabha.tests.VerifierApplicationTest.rejectNonExistentApplication_shouldReturn404()'><b>rejectNonExistentApplication_shouldReturn404</b><br>Test class: com.auctionsabha.tests.VerifierApplicationTest</td>
+<td></td>
+<td>1</td>
+<td>com.auctionsabha.tests.VerifierApplicationTest@2e807c54</td></tr>
+<tr>
+<td title='com.auctionsabha.tests.VerifierApplicationTest.approveVerifierApplication_asAdmin_shouldReturn200WithTempPassword()'><b>approveVerifierApplication_asAdmin_shouldReturn200WithTempPassword</b><br>Test class: com.auctionsabha.tests.VerifierApplicationTest</td>
+<td></td>
+<td>0</td>
+<td>com.auctionsabha.tests.VerifierApplicationTest@2e807c54</td></tr>
+<tr>
+<td title='com.auctionsabha.tests.VerifierApplicationTest.rejectVerifierApplication_asAdmin_shouldReturn200()'><b>rejectVerifierApplication_asAdmin_shouldReturn200</b><br>Test class: com.auctionsabha.tests.VerifierApplicationTest</td>
+<td></td>
+<td>3</td>
+<td>com.auctionsabha.tests.VerifierApplicationTest@2e807c54</td></tr>
+<tr>
+<td title='com.auctionsabha.tests.VerifierApplicationTest.getAllVerifierApplications_asBuyer_shouldBeForbidden()'><b>getAllVerifierApplications_asBuyer_shouldBeForbidden</b><br>Test class: com.auctionsabha.tests.VerifierApplicationTest</td>
+<td></td>
+<td>0</td>
+<td>com.auctionsabha.tests.VerifierApplicationTest@2e807c54</td></tr>
+<tr>
+<td title='com.auctionsabha.tests.VerifierApplicationTest.getPendingVerifierApplications_asAdmin_shouldReturn200()'><b>getPendingVerifierApplications_asAdmin_shouldReturn200</b><br>Test class: com.auctionsabha.tests.VerifierApplicationTest</td>
+<td></td>
+<td>0</td>
+<td>com.auctionsabha.tests.VerifierApplicationTest@2e807c54</td></tr>
+</table><p>
+</body>
+</html>
