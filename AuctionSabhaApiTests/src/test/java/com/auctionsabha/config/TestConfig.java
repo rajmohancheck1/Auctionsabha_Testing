@@ -79,6 +79,8 @@ public class TestConfig {
     }
 
     // ── Private Helpers ──────────────────────────────────────────────────────
+     // ── Private Helpers ──────────────────────────────────────────────────────
+    
 
     @Step("Register user: {email} as {role}")
     private void registerUser(String email, String password, String name, String phone, String role) {
